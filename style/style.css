@@ -22,7 +22,7 @@ body{
 
 .active-text{ color: #000000; }
 .active-text:hover{
-   color: #2196F3;
+   color: #B0A990;
 }
 
 .active-border{
@@ -31,7 +31,7 @@ body{
 .active-border:hover{
     border: 4px;
     border-style: solid;
-    color: #2196F3;
+    color: #B0A990;
     cursor: pointer;
 }
 
