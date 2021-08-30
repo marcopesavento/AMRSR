@@ -31,7 +31,7 @@ body{
 .active-border:hover{
     border: 4px;
     border-style: solid;
-    color: #B0A990;
+    color: #337AB7;
     cursor: pointer;
 }
 
@@ -45,7 +45,7 @@ body{
 .title{
     font-size: 20pt;
     font-weight: bold;
-    color: #B0A990;
+    color: #337AB7;
 }
 .subtitle{
     font-size: 16pt;
