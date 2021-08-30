@@ -67,8 +67,8 @@ pre{
     font-size: 12pt !important;
 }
 
-.navbar-fixed { background-color: rgba(45,45,45,0.5);transition: background-color 2s ease 0s;}
-.navbar-fixed.opaque { background-color: rgba(45,45,45,0.5);transition: background-color 2s ease 0s; }
+.navbar-fixed { background-color: rgba(100,45,45,0.5);transition: background-color 2s ease 0s;}
+.navbar-fixed.opaque { background-color: rgba(100,45,45,0.5);transition: background-color 2s ease 0s; }
 
 
 .fa-folder-open{
