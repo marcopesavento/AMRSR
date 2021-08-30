@@ -259,107 +259,6 @@ Perceptual and quantitative ground-truth evaluation demonstrates significant imp
         </div>
       </div>
 
-      <!-- ********** Testing Dataset ********** -->
-      <div class="row"><div class="subtitle">Testing Dataset --- CUFED5</div><br></div>
-      <div class="row center">
-        <div class="caption"><a href="https://drive.google.com/file/d/1Fa1mopExA9YGG1RxrCZZn7QFTYXLx6ph/view" target="_blank"><font class="active-text">CUFED5 Dataset</font></a> --- 126 Testing Images (click on the thumbnails to change the sample image)</div>
-      </div>
-      <div class="row center" id="CUFED5"></div>
-
-      <div class="row center">
-        <table class="centered">
-          <tbady>
-            <tr>
-              <td width="60%">
-                <div class="caption" id="cmp_caption"></div>
-                <div class="center scrollspy" id='cmp_image'></div>
-              </td>
-              <td width="40%">
-                <table class="centered">
-                  <tbody>
-                      <tr>
-                        <td></td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="Original">Original</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="Bicubic">Bicubic</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="SRCNN">SRCNN</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="SCN">SCN</td>
-                      </tr>
-                      <tr>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="DRCN">DRCN</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="LapSRN">LapSRN</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="MDSR">MDSR</td>
-                      </tr>
-                      <tr>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="SelfEx">SelfEx</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="Landmark">Landmark</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="ENet">ENet</td>
-                      </tr>
-                      <tr>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="SRGAN">SRGAN</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="SRNTT-">SRNTT- (ours)</td>
-                        <td class="method-tag" onmouseover="changeMethod(this.id)" id="SRNTT">SRNTT (ours)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-              </td>
-            </tr>
-          </tbady>
-        </table>
-      </div>
-      
-      <!-- script for display testing images -->
-      <script type="text/javascript">
-        function pad(num, size) {
-          var s = num+"";
-          while (s.length < size)
-              s = "0" + s;
-          return s;
-        }
-        
-        var data_path = "./dataset/CUFED5_input/";
-        var img_size = "40";
-        var text = "";
-        for(var i=0; i<126; ++i) {
-          text += "<a href=\"#cmp_image\"><img class=\"active-border\" src=\"" + data_path +  pad(i, 3) + "_0_l.png\" width=\"" + img_size + "\" height=\"" + img_size + "\" onclick=\"showResults(" + i + ")\"><\/a>";
-        }
-        document.getElementById("CUFED5").innerHTML = text;
-        
-        var current_id = 1;
-        function showResults(id) {
-          var text = "";
-          text += "<img class=\"responsive-img demo-img\" src=\"" + data_path +  pad(id, 3) + "_0.png\">"; 
-          document.getElementById("cmp_image").innerHTML = text;
-          document.getElementById("cmp_caption").innerHTML = "Original";
-          current_id = id;
-        }
-        showResults(current_id);
-        
-        var result_path = "results/";
-        function changeMethod(method) {
-          if(method == "Original") {
-            showResults(current_id);
-          }
-          else if(method == "Input") {
-            var text = "";
-            text += "<img class=\"responsive-img demo-img\" src=\"" + data_path + pad(current_id, 3) + "_0_l.png\">"; 
-            document.getElementById("cmp_image").innerHTML = text;
-            document.getElementById("cmp_caption").innerHTML = method;
-          }
-          else {
-            var text = "";
-            text += "<img class=\"responsive-img demo-img\" src=\"" + result_path + method + "/" + pad(current_id, 3) + "_0.png\">"; 
-            document.getElementById("cmp_image").innerHTML = text;
-            document.getElementById("cmp_caption").innerHTML = method;
-          }
-        }
-
-      </script>
-
-    </div>
-    
 
     <!-- ********** References ********** -->
     <div class="row section scrollspy" id="reference">
@@ -442,13 +341,13 @@ Perceptual and quantitative ground-truth evaluation demonstrates significant imp
   <footer class="page-footer grey lighten-3">
       <!-- <div class="row"> -->
         <dir>
-            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=800000&w=590&t=tt&d=9E5yuPoTz50O-ZmdoM3TzpuTvDRCmi8ZVlEuBwah-_8&co=eeeeee&ct=880000&cmn=1e88e5&cmo=f57f17'></script>
+            <script type='text/javascript' id='clustrmaps' src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=BTv5qEki-SYFssA-nfp-vsa9aV7QKmlFhjUrEIKlgW4&cmo=3acc3a&cmn=3acc3a&co=0061a6"></script>
 
         </dir>
       <!-- </div> -->
     
     <div class="footer-copyright center maroon-text">
-      Copyright © Zhifei Zhang 2018
+      Copyright © Marco Pesavento 2021
     </div>
   </footer>
 
